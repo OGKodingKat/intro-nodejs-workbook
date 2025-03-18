@@ -36,8 +36,8 @@ app.get("/find-recipe/:index", (req, res) => {
     }
 });
 
-// Delete one recipe by index
-app.delete("/delete-recipe/:index", (req, res) => {
+// Delete a recipe
+app.get("/delete-recipe/:index", (req, res) => {
     const recipes = readRecipes();
     const index = parseInt(req.params.index);
 
@@ -50,8 +50,8 @@ app.delete("/delete-recipe/:index", (req, res) => {
     }
 });
 
-// Update the name of one recipe
-app.put("/update-recipe/:index/:newName", (req, res) => {
+// Update recipe name
+app.get("/update-recipe/:index/:newName", (req, res) => {
     const recipes = readRecipes();
     const index = parseInt(req.params.index);
     const newName = req.params.newName;
@@ -64,6 +64,7 @@ app.put("/update-recipe/:index/:newName", (req, res) => {
         res.status(404).json({ message: "Recipe not found" });
     }
 });
+
 
 // Start the server
 app.listen(PORT, () => {

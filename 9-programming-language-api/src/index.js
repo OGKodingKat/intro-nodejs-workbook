@@ -26,7 +26,7 @@ async function getAllLanguages(){
 
 }
 
-
+//checking
 //api endpoint
 app.get("/get-all-languages", async (req, res) =>{
     let languages = getAllLanguages();

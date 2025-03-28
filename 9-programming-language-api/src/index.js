@@ -1,9 +1,8 @@
-import express from "express"; // External module for Express
-import pg from "pg";
-const { Client } = pg;
-import config from "./config.js"; // Internal module for DB connection
+import express from 'express'; //external module for using express
+import pg from 'pg';
+const { Client } = pg
+import config from './config.js'; // internal module for connecting to our config file
 
-const app = express();
 const port = 3000;
 
 app.use(express.json());
